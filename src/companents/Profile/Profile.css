@@ -1,38 +1,37 @@
-.profile{
+.profile {
     padding: 15px;
 }
 
-.me{
+.me {
     display: grid;
-    grid-template-columns: 3fr 9fr ;
+    grid-template-columns: 3fr 9fr;
     gap: 10px;
 
 }
 
-.me img{
+.me img {
     width: 100%;
     border-radius: 10px;
 
 }
 
-.posts{
+.posts {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
 }
 
-.posts img{
+.posts img {
     width: 60px;
     margin: 5px;
     margin-bottom: 0;
-    
+
 }
 
 .post {
     margin: 20px 0;
 }
 
-.post p{
+.post p {
     margin: 10px 0;
 }
-
