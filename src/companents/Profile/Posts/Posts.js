@@ -3,16 +3,12 @@ import ava from "../../../img/Star.webp";
 import Post from "./Post/Post";
 
 
-function Posts() {
+function Posts(props) {
     return (
         <div className="posts">
             <input type="text" placeholder="Enter the post" />
             <button>Post</button>
-            <Post message="Hi" />
-            <Post message="How are you ?" />
-            <Post message="Nice to meet you!" />
-            <Post message="I am hungry." />
-
+            {props.messages.map(e => <Post message={e.message} id={e.id} />)}
         </div>
     );
 }

@@ -1,13 +1,16 @@
 import React from "react";
 import "./Messages.css";
 import Message from "./Message/Message";
+let messages =[
+    {name:"Вася", message:"Я Вася!", id: 1},
+    {name:"Галкин", message:"Алла это я, твой муж!", id: 2},
+    {name:"Алла", message:"Я очень рада тебе!", id: 3},
+]
 
 function Messages() {
     return (
         <div className="messages">
-            <Message name="Вася" message="Я Вася!" />
-            <Message name="Галкин" message="Алла это я, твой муж!" />
-            <Message name="Алла" message="Я очень рада тебе!" />
+            {messages.map(e => <Message name={e.name} message={e.message} id={e.id} />)}
             
             <form className="form">
                 <input type="text" placeholder="Введите сообщение" />
