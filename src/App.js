@@ -5,7 +5,7 @@ import Navbar from './companents/Navbar/Navbar';
 import Messages from './companents/Messages/Messages';
 import { BrowserRouter, Routes, Route } from 'react-router';
 
-function App() {
+function App(props) {
   return (
     <div className='wrapper'>
       <BrowserRouter>
@@ -14,10 +14,10 @@ function App() {
         <div>
 
           <Routes>
-            <Route index element={<Profile />} />
+            <Route index element={<Profile profilePage={props.state.profilePage} />} />
 
-            <Route path="Profile" element={<Profile />} />
-            <Route path="Messages" element={<Messages />} />
+            <Route path="Profile" element={<Profile profilePage={props.state.profilePage} />} />
+            <Route path="Messages" element={<Messages messagePage={props.state.messagePage} />} />
           </Routes>
 
         </div>

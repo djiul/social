@@ -8,7 +8,7 @@ function Posts(props) {
         <div className="posts">
             <input type="text" placeholder="Enter the post" />
             <button>Post</button>
-            {props.messages.map(e => <Post message={e.message} id={e.id} />)}
+            {props.postData.map(e => <Post message={e.message} id={e.id} />)}
         </div>
     );
 }
