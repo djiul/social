@@ -14,9 +14,9 @@ function App(props) {
         <div>
 
           <Routes>
-            <Route index element={<Profile profilePage={props.state.profilePage} />} />
+            <Route index element={<Profile profilePage={props.state.profilePage} addPost={props.addPost} />} />
 
-            <Route path="Profile" element={<Profile profilePage={props.state.profilePage} />} />
+            <Route path="Profile" element={<Profile profilePage={props.state.profilePage} addPost={props.addPost} />} />
             <Route path="Messages" element={<Messages messagePage={props.state.messagePage} />} />
           </Routes>
 

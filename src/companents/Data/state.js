@@ -1,3 +1,5 @@
+import rerenderTree from "../../render";
+
 let state = {
     profilePage: {
         postData: [
@@ -5,9 +7,9 @@ let state = {
             { message: "How are you?", id: 2 },
             { message: "Nice to meet you!", id: 3 },
             { message: "I am hungry.", id: 4 },
+
         ]
     },
-    
     messagePage: {
         messageData: [
             { name: "Вася", message: "Я Вася!", id: 1 },
@@ -16,8 +18,16 @@ let state = {
         ]
     },
 }
-
 export default state;
 
+ export let addPost = (text)=>{
+    let newPost = {
+        message: text,
+        id: 5
+    }
+    state.profilePage.postData.unshift(newPost)
+    console.log(state)
+    rerenderTree(state)
+}
 
 
